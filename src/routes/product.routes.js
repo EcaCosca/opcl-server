@@ -8,6 +8,7 @@ router.route('/')
 
 
 router.route('./:id')
-    .get()
+    .get((req, res) => res.json({message: 'GET request'}))
+
 
 module.exports = router;
