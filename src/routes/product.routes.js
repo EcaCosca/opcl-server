@@ -9,7 +9,7 @@ router.route('/')
 
 
 router.route('./:id')
-    .get(getProducts)
+    .get(getProduct)
 
 
 module.exports = router;
