@@ -1,5 +1,7 @@
 const userCtrl = {};
 
+const User = require('../models/user.model');
+
 userCtrl.getUsers = (req, res) => res.json({message: []});
 
 userCtrl.createUser = (req, res) => res.json({message: []});
