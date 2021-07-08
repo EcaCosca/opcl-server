@@ -8,11 +8,11 @@ const productSchema = new Schema ({
     imgProducto: {type: String},
     imgTecnica: {type: String},
     manualInstructivo: {type: String},
-    dimensiones: {
-        ancho: {type: Number},
-        largo: {type: Number},
-        alto: {type: Number},
-    }
+    // dimensiones: {
+    //     ancho: {type: Number},
+    //     largo: {type: Number},
+    //     alto: {type: Number},
+    // }
 }, {
     timestamps: true
 });

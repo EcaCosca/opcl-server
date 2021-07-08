@@ -16,7 +16,7 @@ productCtrl.createProduct = async (req, res) => {
         imgProducto,
         imgTecnica,
         manualInstructivo,
-        dimensiones
+        // dimensiones
      } = req.body;
     const newProduct = new Product({
         category,
@@ -26,9 +26,10 @@ productCtrl.createProduct = async (req, res) => {
         imgProducto,
         imgTecnica,
         manualInstructivo,
-        dimensiones
+        // dimensiones
     })
     await newProduct.save();
+    console.log(newProduct._id)
     res.json({message: 'Product saved'})
 };
 
