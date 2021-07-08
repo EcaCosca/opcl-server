@@ -8,7 +8,12 @@ userCtrl.getUsers = async (req, res) => {
 };
 
 userCtrl.createUser = (req, res) => {
-    const { test } = req.body;
+    const { email, password } = req.body;
+    const newUser = new User({
+        email,
+        password
+    })
+    console.log(newUser);
     res.json({message: 'User saved'})
 };
 
