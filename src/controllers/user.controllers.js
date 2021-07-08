@@ -7,13 +7,22 @@ userCtrl.getUsers = async (req, res) => {
     res.json(users);
 };
 
-userCtrl.createUser = (req, res) => res.json({message: []});
+userCtrl.createUser = (req, res) => {
+    const { test } = req.body;
+    res.json({message: 'User saved'})
+};
 
-userCtrl.getUser = (req, res) => res.json({message: 'GET request'})
+userCtrl.getUser = (req, res) => {
 
-userCtrl.editUser = (req, res) => res.json({message: 'GET request'})
+};
 
-userCtrl.deleteUser = (req, res) => res.json({message: 'GET request'})
+userCtrl.editUser = (req, res) => {
+
+};
+
+userCtrl.deleteUser = (req, res) => {
+
+};
 
 
 module.exports = userCtrl;

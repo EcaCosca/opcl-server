@@ -12,4 +12,5 @@ router.route('/')
     .put(editUser)
     .delete(deleteUser);
 
-    module.exports = router;
+
+ module.exports = router;
