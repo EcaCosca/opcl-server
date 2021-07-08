@@ -9,7 +9,7 @@ router.route('/')
     .post(createProduct);
 
 
-router.route('./:id')
+router.route('/:id')
     .get(getProduct)
     .put(editProduct)
     .delete(deleteProduct);
