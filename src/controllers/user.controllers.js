@@ -23,7 +23,13 @@ userCtrl.getUser = async (req, res) => {
 };
 
 userCtrl.editUser = async (req, res) => {
-    res.json({message: 'User saved'})
+    console.log(req.params.id, req.body)
+    const {email, password} = req.body;
+    User.findOneAndUpdate({_id: req.params.id}, {
+        email,
+        password
+    })
+    res.json({message: 'User edit saved'})
 };
 
 userCtrl.deleteUser = async (req, res) => {
