@@ -7,26 +7,28 @@ userCtrl.getUsers = async (req, res) => {
     res.json(users);
 };
 
-userCtrl.createUser = (req, res) => {
+userCtrl.createUser = async (req, res) => {
     const { email, password } = req.body;
     const newUser = new User({
         email,
         password
     })
-    console.log(newUser);
+    await newUser.save();
     res.json({message: 'User saved'})
 };
 
-userCtrl.getUser = (req, res) => {
-
+userCtrl.getUser = async (req, res) => {
+    const user = await User.findById(req.params.id);
+    res.json(user)
 };
 
-userCtrl.editUser = (req, res) => {
-
+userCtrl.editUser = async (req, res) => {
+    res.json({message: 'User saved'})
 };
 
-userCtrl.deleteUser = (req, res) => {
-
+userCtrl.deleteUser = async (req, res) => {
+    const user = await User.findByIdAndDelete(req.params.id);
+    res.json({message: 'User deleted'})
 };
 
 
