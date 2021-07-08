@@ -2,7 +2,10 @@ const userCtrl = {};
 
 const User = require('../models/user.model');
 
-userCtrl.getUsers = (req, res) => res.json({message: []});
+userCtrl.getUsers = async (req, res) => {
+    const users = await User.find();
+    res.json(users);
+};
 
 userCtrl.createUser = (req, res) => res.json({message: []});
 
