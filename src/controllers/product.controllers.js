@@ -29,7 +29,6 @@ productCtrl.createProduct = async (req, res) => {
         // dimensiones
     })
     await newProduct.save();
-    console.log(newProduct._id)
     res.json({message: 'Product saved'})
 };
 
