@@ -13,6 +13,8 @@ const productSchema = new Schema ({
     //     largo: {type: Number},
     //     alto: {type: Number},
     // }
+
+    // Changing the entire schema for google sheets JSON file
 }, {
     timestamps: true
 });
