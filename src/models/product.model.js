@@ -21,22 +21,6 @@ const productSchema = new Schema ({
     resistenciaFuego: {type: String},
     resistenciaIP: {type: String},
     temperatura: {type: String}
-
-    // category: {type: String},
-    // series: {type: String},
-    // model: {type: String, unique: true},
-    // descripcion: { type: String},
-    // imgProducto: {type: String},
-    // imgTecnica: {type: String},
-    // manualInstructivo: {type: String},
-    // dimensiones: {
-    //     ancho: {type: Number},
-    //     largo: {type: Number},
-    //     alto: {type: Number},
-    // }
-
-    // Changing the entire schema for google sheets JSON file
-
 }, {
     timestamps: true
 });

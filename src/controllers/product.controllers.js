@@ -29,14 +29,6 @@ productCtrl.createProduct = async (req, res) => {
         resistenciaFuego,
         resistenciaIP,
         temperatura
-        // category,
-        // series,
-        // model,
-        // descripcion,
-        // imgProducto,
-        // imgTecnica,
-        // manualInstructivo,
-        // dimensiones
      } = req.body;
     const newProduct = new Product({
         codSerie,
@@ -59,15 +51,6 @@ productCtrl.createProduct = async (req, res) => {
         resistenciaFuego,
         resistenciaIP,
         temperatura
-
-        // category,
-        // series,
-        // model,
-        // descripcion,
-        // imgProducto,
-        // imgTecnica,
-        // manualInstructivo,
-        // dimensiones
     })
     await newProduct.save();
     res.json({message: 'Product saved'})
