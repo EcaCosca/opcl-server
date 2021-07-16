@@ -13,6 +13,5 @@ app.use(express.json());
 // ROUTES 
 app.use('/api/users', require('./routes/user.routes')) 
 app.use('/api/product', require('./routes/product.routes')) 
-app.use('/api/insta', require('./routes/insta.routes')) 
 
 module.exports = app;
